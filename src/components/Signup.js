@@ -3,6 +3,7 @@ import { getProvinces, getLocations } from '../services/location'
 import { addInscription } from '../services/inscription'
 import 'react-lite-toast/dist/index.css'
 import { Toast } from 'react-lite-toast'
+import Alert from './Alert'
 const Signup = () => {
   const [toast, setToast] = useState(false)
   const [provinces, setProvinces] = useState([])
@@ -27,7 +28,7 @@ const Signup = () => {
     setProvinces(sorted)
   }
   useEffect(() => {
-    async function getProvincesHook () {
+    async function getProvincesHook() {
       await handleProvinces()
     }
     getProvincesHook()
@@ -48,7 +49,15 @@ const Signup = () => {
       name, lastname, DNI, numberCell, email, provinceOrigin, locationOrigin, distanceTour
     }
     const response = await addInscription({ inscription })
-    if (response.status(201)) setToast(!toast)
+    if (response) {
+      setToast(!toast)
+      setName('')
+      setDNI('')
+      setLastName('')
+      setEmail('')
+      setNumberCell('')
+      setSelectTermsConditions(!selectTermsConditions)
+    }
   }
   return (
     <section className='signup-section' id='signup'>
@@ -59,7 +68,7 @@ const Signup = () => {
             <form id='inscriptionForm' onSubmit={handleInscription}>
               <div className='form-row'>
                 <div className='col'>
-                  <input value={name} onChange={(e) => setName(e.target.value)} className='form-control mr-0 mr-sm-2 mb-3 mb-sm-0' id='name' type='text' placeholder='Nombres/s' name='name' required='required' />
+                  <input value={name} onChange={(e) => setName(e.target.value)} className='form-control mr-0 mr-sm-2 mb-3 mb-sm-0' id='name' type='text' placeholder='Nombre/s' name='name' required='required' />
                 </div>
                 <div className='col'>
                   <input value={lastname} onChange={(e) => setLastName(e.target.value)} className='form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0' id='lastname' type='text' placeholder='Apellido/s' name='lastname' required='required' />
@@ -72,12 +81,12 @@ const Signup = () => {
               </div>
               <div className='form-row mt-2'>
                 <div className='col'>
-                  <input value={email} onChange={(e) => setEmail(e.target.value)} className='form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0' id='email' type='email' placeholder='Correo electronico' name='email' required='required' />
+                  <input value={email} onChange={(e) => setEmail(e.target.value)} className='form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0' id='email' type='email' placeholder='Correo electronico' name='email' />
                 </div>
               </div>
               <div className='form-row mt-2'>
                 <div className='col'>
-                  <input value={numberCell} onChange={(e) => setNumberCell(e.target.value)} className='form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0' id='numberCell' type='tel' placeholder='Numero de teléfono' name='numberCell' required='required' />
+                  <input value={numberCell} onChange={(e) => setNumberCell(e.target.value)} className='form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0' id='numberCell' type='tel' placeholder='Numero de teléfono' name='numberCell' />
                 </div>
               </div>
               <div className='form-row mt-2'>
@@ -90,7 +99,7 @@ const Signup = () => {
                     }}
                     className='custom-select flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0' id='provinceOrigin' name='provinceOrigin' required='required'
                   >
-                    <option selected='selected' disabled='disabled'>Provincia</option>
+                    <option hidden>Provincia</option>
                     {provinces.map(prov => (
                       <option value={prov.nombre} key={prov.id}>{prov.nombre}</option>)
                     )}
@@ -102,9 +111,10 @@ const Signup = () => {
                   <select
                     value={locationOrigin}
                     onChange={e => setLocationOrigin(e.target.value)}
-                    className='custom-select flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0' id='locationOrigin' name='locationOrigin' required='required'
+                    className='custom-select flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0'
+                    id='locationOrigin' name='locationOrigin' required='required'
                   >
-                    <option selected='selected' disabled='disabled'>Localidad</option>
+                    <option hidden>Localidad</option>
                     {locations.map(item => (
                       <option value={item.nombre} key={item.id}>{item.nombre}</option>)
                     )}
@@ -114,8 +124,11 @@ const Signup = () => {
               </div>
               <div className='form-row mt-2'>
                 <div className='col'>
-                  <select value={distanceTour} onChange={e => setDistanceTour(e.target.value)} className='custom-select flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0' id='distanceTour' name='distanceTour' required='required'>
-                    <option selected='selected' disabled='disabled'>Recorrido a realizar?</option>
+                  <select
+                    value={distanceTour} onChange={e => setDistanceTour(e.target.value)} className='custom-select flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0'
+                    id='distanceTour' name='distanceTour' required
+                  >
+                    <option hidden>¿Recorrido a realizar?</option>
                     <option key='40km' value='40km'>40km</option>
                     <option key='50km' value='50km'>50km</option>
                   </select>
@@ -133,8 +146,9 @@ const Signup = () => {
                 </label>
               </div>
               <button disabled={!selectTermsConditions} className='btn btn-primary mx-auto mt-2' type='submit'>Enviar</button>
-              {toast && <Toast type='success' title='Te esperamos!' description='Se inscribio con exito' position='bottomup' duration={10000} closeButton />}
+              {/* toast && <Toast type='success' title='Te esperamos!' description='Se inscribio con exito' position='bottomup' duration={10000} closeButton /> */}
             </form>
+            {toast && <Alert />}
           </div>
         </div>
       </div>

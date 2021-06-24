@@ -5,6 +5,7 @@ const Footer = () => {
       <div className='container'>
         &copy; Desarrolled by: <br />Omiñuka Mauro Cristian Emanuel.
         <div>
+          <strong>Sugerencias: </strong>
           <a href='mailto:ominuka.mauro@gmail.com' rel='noreferrer'>Ominuka.Mauro@gmail.com</a>
           <div>
             <a className='mx-2' href='https://github.com/OmiMauro' rel='noreferrer' target='_blank'><i className='fab fa-github' /></a>

@@ -29,7 +29,7 @@ const Contact = () => {
               <div className='card-body text-center'><i className='fas fa-mobile-alt text-primary mb-2' />
                 <h4 className='text-uppercase m-0'>Grupo de Whatsapp</h4>
                 <hr className='my-4' />
-                <div className='small text-black-50'> <a href='https://chat.whatsapp.com/LfdZr7FVbAS9J5rRX7xdEt' rel='noreferrer'>Unirte</a></div>
+                <div className='small text-black-50'> <a href='https://chat.whatsapp.com/LfdZr7FVbAS9J5rRX7xdEt' rel='noreferrer' /></div>
               </div>
             </div>
           </div>
