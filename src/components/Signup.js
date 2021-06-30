@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { getProvinces, getLocations } from '../services/location'
 import { addInscription, getCount } from '../services/inscription'
 import 'react-lite-toast/dist/index.css'
-import { Toast } from 'react-lite-toast'
+// import { Toast } from 'react-lite-toast'
 import Alert from './Alert'
 const Signup = () => {
   const [toast, setToast] = useState(false)
@@ -96,7 +96,7 @@ const Signup = () => {
               </div>
               <div className='form-row mt-2'>
                 <div className='col'>
-                  <input value={email} onChange={(e) => setEmail(e.target.value)} className='form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0' id='email' type='email' placeholder='Correo electronico' name='email' />
+                  <input value={email} onChange={(e) => setEmail(e.target.value)} className='form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0' id='email' type='email' placeholder='Correo electronico' name='email' required='required' />
                 </div>
               </div>
               <div className='form-row mt-2'>
