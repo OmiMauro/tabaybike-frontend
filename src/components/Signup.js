@@ -59,14 +59,18 @@ const Signup = () => {
     }
     const response = await addInscription({ inscription })
     if (response) {
-      setToast(!toast)
+      setToast(true)
       setName('')
       setDNI('')
       setLastName('')
       setEmail('')
       setNumberCell('')
-      setSelectTermsConditions(!selectTermsConditions)
-      setCount(count+1)
+      setCount(count + 1)
+      setProvinceOrigin('')
+      setLocationOrigin('')
+      setDistanceTour('')
+      setSelectTermsConditions(false)
+      setTimeout(()=>{setToast(false)}, 6000); 
     }
   }
   return (
