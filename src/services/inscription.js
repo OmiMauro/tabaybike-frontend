@@ -16,5 +16,12 @@ const addInscription = async ({ inscription }) => {
   })
   return response
 }
+const getInscritpions = async () => {
+  const response = await axios({
+    method: 'get',
+    url: '/inscription'
+  })
+  return response
+}
 
-export { getCount, addInscription }
+export { getCount, addInscription, getInscritpions }

@@ -7,6 +7,7 @@ import Signup from './components/Signup'
 import Footer from './components/Footer'
 import Header from './components/Header'
 import { SnackbarProvider } from 'snackfy'
+import Table from './components/Table'
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
           <Signup />
           <Contact />
           <Footer />
+          <Table />
         </main>
       </SnackbarProvider>
     </>
