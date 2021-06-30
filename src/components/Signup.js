@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react'
 import { getProvinces, getLocations } from '../services/location'
 import { addInscription, getCount } from '../services/inscription'
 import 'react-lite-toast/dist/index.css'
-import { Toast } from 'react-lite-toast'
-import Alert from './Alert'
+/* import { Toast } from 'react-lite-toast'
+ */import Alert from './Alert'
 const Signup = () => {
   const [toast, setToast] = useState(false)
   const [provinces, setProvinces] = useState([])
@@ -70,7 +70,7 @@ const Signup = () => {
       setLocationOrigin('')
       setDistanceTour('')
       setSelectTermsConditions(false)
-      setTimeout(() => { setToast(false) }, 6000) 
+      setTimeout(() => { setToast(false) }, 6000)
     }
   }
   return (
@@ -79,7 +79,7 @@ const Signup = () => {
         <div className='row'>
           <div className='col-md-10 col-lg-8 mx-auto text-center'>
             <h2 className='text-white mb-1'>Preinscripcion para el evento del 24/25 de Julio</h2>
-            <h4 className='text-white mb-2'>Cantidad de inscriptos: {count}</h4>
+            <p className='text-white mb-2'><italic>Total de inscriptos: {count}</italic></p>
             <form id='inscriptionForm' onSubmit={handleInscription}>
               <div className='form-row'>
                 <div className='col'>
