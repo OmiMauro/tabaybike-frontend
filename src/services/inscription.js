@@ -1,8 +1,14 @@
 import axios from 'axios'
 
+const getCount = async () => {
+  const response = await axios({
+    method: 'get',
+    url: '/inscription/length'
+  })
+  return response.data.count
+}
 const addInscription = async ({ inscription }) => {
   // const { name, lastName, DNI, numberCell, email, provinceOrigin, locationOrigin, distanceTour } = inscription
-  console.log(inscription)
   const response = await axios({
     method: 'POST',
     data: inscription,
@@ -11,4 +17,4 @@ const addInscription = async ({ inscription }) => {
   return response
 }
 
-export { addInscription }
+export { getCount, addInscription }

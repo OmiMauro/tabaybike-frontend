@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { getProvinces, getLocations } from '../services/location'
-import { addInscription } from '../services/inscription'
+import { addInscription, getCount } from '../services/inscription'
 import 'react-lite-toast/dist/index.css'
 import { Toast } from 'react-lite-toast'
 import Alert from './Alert'
@@ -17,7 +17,7 @@ const Signup = () => {
   const [locationOrigin, setLocationOrigin] = useState('')
   const [distanceTour, setDistanceTour] = useState('')
   const [selectTermsConditions, setSelectTermsConditions] = useState(false)
-
+  const [count, setCount] = useState(0)
   const handleProvinces = async () => {
     const response = await getProvinces()
     const sorted = response.data.provincias.sort(function (a, b) {
@@ -28,12 +28,21 @@ const Signup = () => {
     setProvinces(sorted)
   }
   useEffect(() => {
-    async function getProvincesHook() {
+    async function getProvincesHook () {
       await handleProvinces()
     }
     getProvincesHook()
   }, [])
-
+  const handleCount = async () => {
+    const response = await getCount()
+    setCount(response)
+  }
+  useEffect(() => {
+    async function getCountInscription () {
+      await handleCount()
+    }
+    getCountInscription()
+  }, [])
   const handleLocality = async (name) => {
     const response = await getLocations(name)
     const sorted = await response.data.municipios.sort(function (a, b) {
@@ -57,14 +66,16 @@ const Signup = () => {
       setEmail('')
       setNumberCell('')
       setSelectTermsConditions(!selectTermsConditions)
+      setCount(count+1)
     }
   }
   return (
     <section className='signup-section' id='signup'>
       <div className='container'>
         <div className='row'>
-          <div className='col-md-10 col-lg-8 mx-auto text-center'><i className='far fa-paper-plane fa-2x mb-2 text-white' />
-            <h2 className='text-white mb-5'>Inscripcion</h2>
+          <div className='col-md-10 col-lg-8 mx-auto text-center'>
+            <h2 className='text-white mb-1'>Preinscripcion para el evento del 24/25 de Julio</h2>
+            <h4 className='text-white mb-2'>Cantidad de inscriptos: {count}</h4>
             <form id='inscriptionForm' onSubmit={handleInscription}>
               <div className='form-row'>
                 <div className='col'>
