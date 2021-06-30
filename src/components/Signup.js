@@ -70,7 +70,7 @@ const Signup = () => {
       setLocationOrigin('')
       setDistanceTour('')
       setSelectTermsConditions(false)
-      setTimeout(()=>{setToast(false)}, 6000); 
+      setTimeout(() => { setToast(false) }, 6000) 
     }
   }
   return (
@@ -157,7 +157,7 @@ const Signup = () => {
                   }} id='termsAndConditions'
                 />
                 <label class='form-check-label' for='termsAndConditions' style={{ color: 'white' }}>
-                  He leído y acepto los <a href='privacy_policy.html' target='_blank' rel='noreferrer'>Terminos y Condiciones</a>
+                  He leído y acepto los <a href='terms_conditions.html' target='_blank' rel='noreferrer'>Terminos y Condiciones</a>
                 </label>
               </div>
               <button disabled={!selectTermsConditions} className='btn btn-primary mx-auto mt-2' type='submit'>Enviar</button>
