@@ -70,7 +70,7 @@ const Signup = () => {
       setLocationOrigin('')
       setDistanceTour('')
       setSelectTermsConditions(false)
-      setTimeout(()=>{setToast(false)}, 6000); 
+      setTimeout(() => { setToast(false) }, 6000)
     }
   }
   return (

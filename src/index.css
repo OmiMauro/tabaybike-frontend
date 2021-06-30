@@ -10746,8 +10746,7 @@ body {
       rgba(0, 0, 0, 0.1) 0%,
       rgba(0, 0, 0, 0.5) 75%,
       #000000 100%
-    ),
-    url("imgs/inscription.jpg");
+    ),    url("imgs/inscription.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
