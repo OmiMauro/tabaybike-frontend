@@ -78,8 +78,8 @@ const Signup = () => {
       <div className='container'>
         <div className='row'>
           <div className='col-md-10 col-lg-8 mx-auto text-center'>
-            <h2 className='text-white mb-1'>Preinscripcion para el evento del 24/25 de Julio</h2>
-            <p className='text-white mb-2'><italic>Total de inscriptos: {count}</italic></p>
+            <h2 className='text-white mb-1'>Preinscripcion para el evento del 25 de Julio</h2>
+            <p className='text-white mb-2'><i>Total de inscriptos: {count}</i></p>
             <form id='inscriptionForm' onSubmit={handleInscription}>
               <div className='form-row'>
                 <div className='col'>
