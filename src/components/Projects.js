@@ -7,9 +7,9 @@ const Projects = () => {
           <div className='col-xl-8 col-lg-7'><img className='img-fluid mb-3 mb-lg-0' src='imgs/invitacion.jpg' alt='Invitacion' /></div>
           <div className='col-xl-4 col-lg-5'>
             <div className='featured-text text-center text-lg-left'>
-              <h3>Encuentro provincial de cicloturismo autoasistido</h3>
+              <h3>IV Encuentro Provincial de MTB</h3>
               <h4 className='text-black-50 mb-0'>Cronograma</h4>
-              <ul>
+              <ul className='text-left'>
                 <li className='list-unstyled'>
                   24 de Julio:
                   <ul>
@@ -30,14 +30,15 @@ const Projects = () => {
 
         <div className='row justify-content-center no-gutters mb-5 mb-lg-0'>
           <div className='col-lg-6' id='recorridos'>
-            <img className='img-fluid' src='imgs/salidasNocturnas.jpg' alt='' />
+            <iframe title='Mapa' src='https://www.google.com/maps/d/embed?mid=1bLnHFHDiY7RTtkjs4u8NU7RNve8pUR2L' width='100%' height='100%' />
+            {/*             <img className='img-fluid' src='imgs/salidasNocturnas.jpg' alt='' /> */}
           </div>
           <div className='col-lg-6 order-lg-first'>
             <div className='bg-black text-center h-100 project'>
               <div className='d-flex h-100'>
                 <div className='project-text w-100 my-auto text-center text-lg-left'>
                   <h4 className='text-white'>Recorrido de 35km</h4>
-                  <ul className='text-lg-left text-white-50'>
+                  <ul className='text-left text-white-50'>
                     <li className='list-unstyled'>Salida desde el Salto Tabay</li>
                     <li className='list-unstyled'>Terminal de Jardín América</li>
                     <li className='list-unstyled'>Colonia Naranjito por Iglesia de Piedra</li>
@@ -45,7 +46,7 @@ const Projects = () => {
                     <li className='list-unstyled'>Retorno por Colonia Tabay</li>
                     <li className='list-unstyled'>Llegada al Salto Tabay</li>
                   </ul>
-                  <a href='https://goo.gl/maps/WRjb3dqW2kVkyAhb7' rel='noreferrer' target='_blank'>Descargar indicaciones</a>
+                  <a href='https://www.google.com/maps/d/embed?mid=1bLnHFHDiY7RTtkjs4u8NU7RNve8pUR2L' rel='noreferrer' target='_blank'>Descargar indicaciones</a>
                   <hr className='d-none d-lg-block mb-0 ml-0' />
                 </div>
               </div>
@@ -54,14 +55,14 @@ const Projects = () => {
         </div>
         <div className='row justify-content-center no-gutters mb-5 mb-lg-0'>
           <div className='col-lg-6'>
-            <img className='img-fluid' src='imgs/bikePinal.jpg' alt='' />
+            <iframe title='Mapa' src='https://www.google.com/maps/d/embed?mid=1bLnHFHDiY7RTtkjs4u8NU7RNve8pUR2L' width='100%' height='100%' />
           </div>
           <div className='col-lg-6 '>
             <div className='bg-black text-center h-100 project'>
               <div className='d-flex h-100'>
                 <div className='project-text w-100 my-auto text-center text-lg-left'>
                   <h4 className='text-white'>Recorrido de 55km</h4>
-                  <ul className='text-lg-left text-white-50'>
+                  <ul className='text-left text-white-50'>
                     <li className='list-unstyled'>Salida desde el Salto Tabay</li>
                     <li className='list-unstyled'>Terminal de Jardín América</li>
                     <li className='list-unstyled'>Colonia Naranjito</li>
@@ -71,8 +72,13 @@ const Projects = () => {
                     <li className='list-unstyled'>Retorno por Colonia Tabay</li>
                     <li className='list-unstyled'>Llegada al Salto Tabay</li>
                   </ul>
-                  <a href='https://goo.gl/maps/WRjb3dqW2kVkyAhb7' rel='noreferrer' target='_blank'>Descargar indicaciones</a>
-                  <hr className='d-none d-lg-block mb-0 ml-0' />
+                  <a
+                    href='https://www.google.com/maps/d/embed?mid=1bLnHFHDiY7RTtkjs4u8NU7RNve8pUR2L'
+                    rel='noreferrer' target='_blank'
+                  >Descargar indicaciones
+                  </a>
+                  {/*                   <a href='https://goo.gl/maps/WRjb3dqW2kVkyAhb7' rel='noreferrer' target='_blank'>Descargar indicaciones</a>
+ */}                  <hr className='d-none d-lg-block mb-0 ml-0' />
                 </div>
               </div>
             </div>
@@ -82,16 +88,16 @@ const Projects = () => {
           {/*           <div className='col-lg-6' id='alojamientos'>
             <img className='img-fluid' src='imgs/contacts.jpg' alt='' />
           </div> */}
-          <div className='col-lg-6 order-lg-first'>
+          <div className='col-lg-6 order-lg-first' id='alojamientos'>
             <div className='bg-black text-center h-100 project'>
               <div className='d-flex h-100'>
                 <div className='project-text w-100 my-auto text-center text-lg-left'>
                   <h6 className='text-white'>Restaurantes y Deliveries</h6>
-                  <ul>
-                    <li className='list-unstyled text-white'>Elimark-1: <a href='tel:+543743400421'>+543743400421</a></li>
-                    <li className='list-unstyled text-white'>Elimark-2<a href='tel:+543743460923'>+543743460923</a></li>
-                    <li className='list-unstyled text-white'>La Tabla: <a href='tel:+543743460517'>+543743460517</a></li>
-                    <li className='list-unstyled text-white'>Plaza&Pizza: <a href='tel:+543743460521'>+543743460521</a></li>
+                  <ul className='text-left'>
+                    <li className='list-unstyled text-white'>Eli-Mark 2: <a href='tel:+543743499901'>+543743499901</a></li>
+                    <li className='list-unstyled text-white'>Eli-Mark Terminal: <a href='tel:+543743415836'>+543743415836</a></li>
+                    <li className='list-unstyled text-white'>La Tabla: <a href='tel:+543743541581'>+543743541581</a></li>
+                    <li className='list-unstyled text-white'>Pizza-Plaza: <a href='tel:+543743461851'>+543743461851</a></li>
 
                   </ul>
                   <hr className='d-none d-lg-block mb-0 mr-35' />
@@ -104,13 +110,13 @@ const Projects = () => {
               <div className='d-flex h-100'>
                 <div className='project-text w-100 my-auto text-center text-lg-left'>
                   <h6 className='text-white'>Alojamientos</h6>
-                  <ul>
-                    <li className='list-unstyled text-white'>Complejos Saltos del Tabay: <a href='tel:+543743400421'>+543743400421</a></li>
-                    <li className='list-unstyled text-white'>Complejo Baden Baden:<a href='tel:+543743460923'>+543743460923</a></li>
-                    <li className='list-unstyled text-white'>Complejo Paraiso Lodge: <a href='tel:+543743460517'>+543743460517</a></li>
-                    <li className='list-unstyled text-white'>Complejo America: <a href='tel:+543743460521'>+543743460521</a></li>
-                    <li className='list-unstyled text-white'>Hotel Las Azaleas: <a href='tel:+543743444378'>+543743444378</a></li>
+                  <ul className='text-left'>
                     <li className='list-unstyled text-white'>Cabañas Kito: <a href='tel:+543743435856'>+543743435856</a></li>
+                    <li className='list-unstyled text-white'>Complejo Saltos del Tabay: <a href='tel:+543743400421'>+543743400421</a></li>
+                    <li className='list-unstyled text-white'>Baden Baden:<a href='tel:+543743460923'>+543743460923</a></li>
+                    <li className='list-unstyled text-white'>Paraiso Lodge: <a href='tel:+543743460517'>+543743460517</a></li>
+                    <li className='list-unstyled text-white'>Hotel America: <a href='tel:+543743460521'>+543743460521</a></li>
+                    <li className='list-unstyled text-white'>Hotel Las Azaleas: <a href='tel:+543743444378'>+543743444378</a></li>
                   </ul>
                   <hr className='d-none d-lg-block mb-0 mr-35' />
                 </div>

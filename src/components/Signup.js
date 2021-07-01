@@ -83,15 +83,15 @@ const Signup = () => {
             <form id='inscriptionForm' onSubmit={handleInscription}>
               <div className='form-row'>
                 <div className='col'>
-                  <input value={name} onChange={(e) => setName(e.target.value)} className='form-control mr-0 mr-sm-2 mb-3 mb-sm-0' id='name' type='text' placeholder='Nombre/s' name='name' required='required' />
+                  <input value={name} onChange={(e) => setName(e.target.value)} className='form-control mr-0 mr-sm-2 mb-3 mb-sm-0' id='name' type='text' placeholder='Nombre/s *' name='name' required='required' />
                 </div>
                 <div className='col'>
-                  <input value={lastname} onChange={(e) => setLastName(e.target.value)} className='form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0' id='lastname' type='text' placeholder='Apellido/s' name='lastname' required='required' />
+                  <input value={lastname} onChange={(e) => setLastName(e.target.value)} className='form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0' id='lastname' type='text' placeholder='Apellido/s *' name='lastname' required='required' />
                 </div>
               </div>
               <div className='form-row mt-2'>
                 <div className='col'>
-                  <input value={DNI} onChange={(e) => setDNI(e.target.value)} className='form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0' id='DNI' type='text' placeholder='DNI-sin puntos y/o espacios' name='DNI' required='required' />
+                  <input value={DNI} onChange={(e) => setDNI(e.target.value)} className='form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0' id='DNI' type='text' placeholder='DNI-sin puntos y/o espacios *' name='DNI' required='required' />
                 </div>
               </div>
               <div className='form-row mt-2'>
