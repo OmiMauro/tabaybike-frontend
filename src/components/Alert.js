@@ -1,12 +1,12 @@
 import React from 'react'
-const Alert = () => {
+const Alert = (props) => {
   return (
     <>
-      <div class='alert alert-warning alert-dismissible fade show' role='alert'>
-        <strong>Tu inscripción</strong> se registró con exito! Te esperamos!
+      <div className={props.bg} role='alert'>
+        <strong>{props.message}</strong>
         {/* <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
-          <span aria-hidden='true'>&times;</span> 
-        </button>*/}
+          <span aria-hidden='true'>&times;</span>
+        </button> */}
       </div>
     </>
   )

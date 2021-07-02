@@ -4,7 +4,7 @@ const Footer = () => {
     <footer className='footer bg-black small text-center text-white-50'>
       <strong><a href='privacy_policy.html' target='_blank' rel='noreferrer'>Politicas de privacidad</a></strong>
       <div className='container'>
-        &copy; Omiñuka Mauro Cristian Emanuel.
+        &copy; Omiñuka, Mauro Cristian Emanuel.
         <div>
 
           <a href='mailto:ominuka.mauro@gmail.com' rel='noreferrer'><strong>Sugerencias</strong></a>
