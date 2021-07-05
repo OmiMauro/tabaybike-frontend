@@ -87,7 +87,7 @@ const Signup = () => {
       <div className='container'>
         <div className='row'>
           <div className='col-md-10 col-lg-8 mx-auto text-center'>
-            <h2 className='text-white mb-1'>Inscripción al IV Encuentro Provincial de MTB</h2>
+            <h2 className='text-white mb-1'>Preinscripción al IV Encuentro Provincial de MTB</h2>
             <p className='text-white mb-2'><i>Total de inscriptos: {count}</i></p>
             <form id='inscriptionForm' onSubmit={handleInscription}>
               <div className='form-row'>
@@ -110,7 +110,7 @@ const Signup = () => {
               </div>
               <div className='form-row mt-2'>
                 <div className='col'>
-                  <input value={numberCell} onChange={(e) => setNumberCell(e.target.value)} className='form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0' id='numberCell' type='tel' placeholder='Numero de teléfono' name='numberCell' />
+                  <input value={numberCell} onChange={(e) => setNumberCell(e.target.value)} className='form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0' id='numberCell' type='tel' placeholder='Número de teléfono' name='numberCell' />
                 </div>
               </div>
               <div className='form-row mt-2'>
@@ -153,8 +153,8 @@ const Signup = () => {
                     id='distanceTour' name='distanceTour' required='required'
                   >
                     <option hidden>¿Recorrido a realizar? *</option>
-                    <option key='40km' value='40km'>40km</option>
-                    <option key='50km' value='50km'>50km</option>
+                    <option key='38km' value='38km'>38km</option>
+                    <option key='57km' value='57km'>57km</option>
                   </select>
                 </div>
               </div>

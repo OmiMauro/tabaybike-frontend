@@ -27,26 +27,55 @@ const Projects = () => {
             </div>
           </div>
         </div>
-
+        <div className='row justify-content-center no-gutters mb-5 mb-lg-0'>
+          <div className='col-lg-6'>
+            <iframe src='https://www.google.com/maps/d/embed?mid=1IfYT7r0iioXa2U9GlrjZd_1iV0u21o2f' width='100%' height='100%' title='Sabado-42km' />
+          </div>
+          <div className='col-lg-6 '>
+            <div className='bg-black text-center h-100 project'>
+              <div className='d-flex h-100'>
+                <div className='project-text w-100 my-auto text-center text-lg-left'>
+                  <h4 className='text-white'>Sábado</h4>
+                  <ul className='text-left text-white-50'>
+                    <li className='list-unstyled'>Salida desde el Salto Tabay</li>
+                    <li className='list-unstyled'>Cruce 4 Bocas</li>
+                    <li className='list-unstyled'>Colonia Naranjito</li>
+                    <li className='list-unstyled'>Iglesia Santa Teresita</li>
+                    <li className='list-unstyled'>Colonia Tabay</li>
+                    <li className='list-unstyled'>Retorno por Barrio San Antonio</li>
+                    <li className='list-unstyled'>Llegada al Salto Tabay</li>
+                  </ul>
+                  <a
+                    href='https://www.google.com/maps/d/embed?mid=1IfYT7r0iioXa2U9GlrjZd_1iV0u21o2f'
+                    rel='noreferrer' target='_blank'
+                  >Descargar indicaciones
+                  </a>
+                  {/*                   <a href='https://goo.gl/maps/WRjb3dqW2kVkyAhb7' rel='noreferrer' target='_blank'>Descargar indicaciones</a>
+ */}                  <hr className='d-none d-lg-block mb-0 ml-0' />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <div className='row justify-content-center no-gutters mb-5 mb-lg-0'>
           <div className='col-lg-6' id='recorridos'>
-            <iframe title='Mapa' src='https://www.google.com/maps/d/embed?mid=1bLnHFHDiY7RTtkjs4u8NU7RNve8pUR2L' width='100%' height='100%' />
+            <iframe src='https://www.google.com/maps/d/embed?mid=1PiKJ5L_kXO6dt2hbEc4Cut6z_MumG91d' width='100%' height='100%' title='38km' />
             {/*             <img className='img-fluid' src='imgs/salidasNocturnas.jpg' alt='' /> */}
           </div>
           <div className='col-lg-6 order-lg-first'>
             <div className='bg-black text-center h-100 project'>
               <div className='d-flex h-100'>
                 <div className='project-text w-100 my-auto text-center text-lg-left'>
-                  <h4 className='text-white'>Recorrido de 35km</h4>
+                  <h4 className='text-white'>38km</h4>
                   <ul className='text-left text-white-50'>
                     <li className='list-unstyled'>Salida desde el Salto Tabay</li>
                     <li className='list-unstyled'>Terminal de Jardín América</li>
-                    <li className='list-unstyled'>Colonia Naranjito por Iglesia de Piedra</li>
+                    <li className='list-unstyled'>Iglesia Santa Teresita</li>
                     <li className='list-unstyled'>Plaza de Colonia Oasis</li>
                     <li className='list-unstyled'>Retorno por Colonia Tabay</li>
                     <li className='list-unstyled'>Llegada al Salto Tabay</li>
                   </ul>
-                  <a href='https://www.google.com/maps/d/embed?mid=1bLnHFHDiY7RTtkjs4u8NU7RNve8pUR2L' rel='noreferrer' target='_blank'>Descargar indicaciones</a>
+                  <a href='https://www.google.com/maps/d/embed?mid=1PiKJ5L_kXO6dt2hbEc4Cut6z_MumG91d' rel='noreferrer' target='_blank'>Descargar indicaciones</a>
                   <hr className='d-none d-lg-block mb-0 ml-0' />
                 </div>
               </div>
@@ -55,25 +84,25 @@ const Projects = () => {
         </div>
         <div className='row justify-content-center no-gutters mb-5 mb-lg-0'>
           <div className='col-lg-6'>
-            <iframe title='Mapa' src='https://www.google.com/maps/d/embed?mid=1bLnHFHDiY7RTtkjs4u8NU7RNve8pUR2L' width='100%' height='100%' />
+            <iframe src='https://www.google.com/maps/d/embed?mid=1Kh_HUgIh4zR4e-ThtZLxUaTbsbxP9wS4' width='100%' height='100%' title='57km' />
           </div>
           <div className='col-lg-6 '>
             <div className='bg-black text-center h-100 project'>
               <div className='d-flex h-100'>
                 <div className='project-text w-100 my-auto text-center text-lg-left'>
-                  <h4 className='text-white'>Recorrido de 55km</h4>
+                  <h4 className='text-white'>57km</h4>
                   <ul className='text-left text-white-50'>
-                    <li className='list-unstyled'>Salida desde el Salto Tabay</li>
+                    <li className='list-unstyled'>Salto Tabay</li>
                     <li className='list-unstyled'>Terminal de Jardín América</li>
-                    <li className='list-unstyled'>Colonia Naranjito</li>
-                    <li className='list-unstyled'>Camping El Solito</li>
+                    <li className='list-unstyled'>Salto El Solito</li>
                     <li className='list-unstyled'>Plaza de Colonia Polana</li>
                     <li className='list-unstyled'>Plaza de Colonia Oasis</li>
-                    <li className='list-unstyled'>Retorno por Colonia Tabay</li>
-                    <li className='list-unstyled'>Llegada al Salto Tabay</li>
+                    <li className='list-unstyled'>Colonia Tabay</li>
+                    <li className='list-unstyled'>Barrio San Antonio</li>
+                    <li className='list-unstyled'>Salto Tabay</li>
                   </ul>
                   <a
-                    href='https://www.google.com/maps/d/embed?mid=1bLnHFHDiY7RTtkjs4u8NU7RNve8pUR2L'
+                    href='https://www.google.com/maps/d/embed?mid=1Kh_HUgIh4zR4e-ThtZLxUaTbsbxP9wS4'
                     rel='noreferrer' target='_blank'
                   >Descargar indicaciones
                   </a>
