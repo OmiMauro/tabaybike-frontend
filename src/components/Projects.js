@@ -11,7 +11,7 @@ const Projects = () => {
               <h4 className='text-black-50 mb-0'>Cronograma</h4>
               <ul className='text-left'>
                 <li className='list-unstyled'>
-                  24 de Julio:
+                  Sábado 24 de Julio:
                   <ul>
                     <li className='list-unstyled'>13:30 Concentración en el Salto Tabay</li>
                     <li className='list-unstyled'>14:00 Largada</li>
@@ -20,7 +20,7 @@ const Projects = () => {
 
                   </ul>
                 </li>
-                <li className='list-unstyled'>25 de Julio:
+                <li className='list-unstyled'>Domingo 25 de Julio:
                   <ul>
                     <li className='list-unstyled'>7:00 Inscripción en el Salto Tabay</li>
                     <li className='list-unstyled'>8:00 Largada</li>
@@ -49,7 +49,7 @@ const Projects = () => {
             <div className='bg-black text-center h-100 project'>
               <div className='d-flex h-100'>
                 <div className='project-text w-100 my-auto text-center text-lg-left'>
-                  <h4 className='text-white'>Sábado</h4>
+                  <h4 className='text-white'>Sábado-28km</h4>
                   <ul className='text-left text-white-50'>
                     <li className='list-unstyled'>Salida desde el Salto Tabay</li>
                     <li className='list-unstyled'>Cruce 4 Bocas</li>
