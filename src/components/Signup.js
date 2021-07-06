@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { getProvinces, getLocations } from '../services/location'
-import { addInscription, getCount } from '../services/inscription'
+import { addInscription } from '../services/inscription'
 import 'react-lite-toast/dist/index.css'
 /* import { Toast } from 'react-lite-toast'
  */import Alert from './Alert'
@@ -35,7 +35,7 @@ const Signup = () => {
     }
     getProvincesHook()
   }, [])
-  const handleCount = async () => {
+  /*  const handleCount = async () => {
     const response = await getCount()
     setCount(response)
   }
@@ -44,7 +44,7 @@ const Signup = () => {
       await handleCount()
     }
     getCountInscription()
-  }, [])
+  }, []) */
   const handleLocality = async (name) => {
     const response = await getLocations(name)
     const sorted = await response.data.municipios.sort(function (a, b) {
@@ -79,6 +79,7 @@ const Signup = () => {
       setBg('alert alert-danger alert-dismissible fade show')
       setMessage('Verifique los datos ingresados')
       setToast(true)
+      setTimeout(() => { setToast(false) }, 10000)
     }
   }
 
@@ -88,7 +89,7 @@ const Signup = () => {
         <div className='row'>
           <div className='col-md-10 col-lg-8 mx-auto text-center'>
             <h2 className='text-white mb-1'>Preinscripción al IV Encuentro Provincial de MTB</h2>
-            <p className='text-white mb-2'><i>Total de inscriptos: {count}</i></p>
+            {/*  <p className='text-white mb-2'><i>Total de inscriptos: {count}</i></p> */}
             <form id='inscriptionForm' onSubmit={handleInscription}>
               <div className='form-row'>
                 <div className='col'>
@@ -100,7 +101,7 @@ const Signup = () => {
               </div>
               <div className='form-row mt-2'>
                 <div className='col'>
-                  <input value={DNI} maxlength='9' onChange={(e) => setDNI(e.target.value)} className='form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0' id='DNI' type='text' placeholder='DNI-sin puntos y/o espacios *' name='DNI' required='required' />
+                  <input value={DNI} maxlength='9' minLength='7' onChange={(e) => setDNI(e.target.value)} className='form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0' id='DNI' type='text' placeholder='DNI-sin puntos y/o espacios *' name='DNI' required='required' />
                 </div>
               </div>
               <div className='form-row mt-2'>
@@ -121,7 +122,7 @@ const Signup = () => {
                       const name = e.target.value
                       handleLocality(name)
                     }}
-                    className='custom-select flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0' id='provinceOrigin' name='provinceOrigin' required='required'
+                    className='custom-select flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0' id='provinceOrigin' name='provinceOrigin' required
                   >
                     <option hidden>Provincia *</option>
                     {provinces.map(prov => (
@@ -136,7 +137,7 @@ const Signup = () => {
                     value={locationOrigin}
                     onChange={e => setLocationOrigin(e.target.value)}
                     className='custom-select flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0'
-                    id='locationOrigin' name='locationOrigin' required='required'
+                    id='locationOrigin' name='locationOrigin' required
                   >
                     <option hidden>Localidad * </option>
                     {locations.map(item => (
@@ -150,11 +151,23 @@ const Signup = () => {
                 <div className='col'>
                   <select
                     value={distanceTour} onChange={e => setDistanceTour(e.target.value)} className='custom-select flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0'
-                    id='distanceTour' name='distanceTour' required='required'
+                    id='distanceTour' name='distanceTour' required
                   >
                     <option hidden>¿Recorrido a realizar? *</option>
-                    <option key='38km' value='38km'>38km</option>
+                    <option key='29km' value='29km'>29km</option>
                     <option key='57km' value='57km'>57km</option>
+                  </select>
+                </div>
+              </div>
+              <div className='form-row mt-2'>
+                <div className='col'>
+                  <select
+                    value={distanceTour} onChange={e => setDistanceTour(e.target.value)} className='custom-select flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0'
+                    id='distanceTour' name='distanceTour' required
+                  >
+                    <option hidden>¿Almorzas el Domingo? *</option>
+                    <option key='Si' value>Si</option>
+                    <option key='No' value={false}>No</option>
                   </select>
                 </div>
               </div>
