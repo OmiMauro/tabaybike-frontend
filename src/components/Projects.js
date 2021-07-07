@@ -134,7 +134,7 @@ const Projects = () => {
                 <div className='project-text w-100 my-auto text-center text-lg-left'>
                   <h6 className='text-white'>Restaurantes y Deliveries</h6>
                   <ul className='text-left'>
-                    <li className='list-unstyled text-white'>La Terraza: <a href='tel:+543743454655'>+543743454655</a></li>
+                    <li className='list-unstyled text-white'>La Terraza: <a href='tel:+543743496865'>+543743496865</a></li>
                     <li className='list-unstyled text-white'>Eli-Mark 2: <a href='tel:+543743499901'>+543743499901</a></li>
                     <li className='list-unstyled text-white'>Eli-Mark Terminal: <a href='tel:+543743415836'>+543743415836</a></li>
                     <li className='list-unstyled text-white'>La Tabla: <a href='tel:+543743541581'>+543743541581</a></li>
