@@ -29,9 +29,12 @@ const Projects = () => {
                   </ul>
                 </li>
               </ul>
-              <p className='text-danger'><i>Todos los horarios son estimativos.</i></p>
+              <p className='text-secondary font-italic' style={{ 'font-size': '12px' }}>Todos los horarios son estimativos.</p>
               <br />
-              <p className='text-danger'><i>El encuentro es totalmente gratuito, en la mesa de inscripción tendrán una urna para colaborar con los gastos de la organización.</i></p>
+              <p className='text-danger font-italic' style={{ 'font-size': '12px' }}>
+                El encuentro es totalmente gratuito.
+                Sin embargo, en la mesa de inscripción dispondremos de una caja para aquellos que deseen dejar alguna colaboración para los gastos de la organización.
+              </p>
 
             </div>
           </div>

@@ -145,7 +145,7 @@ const Signup = () => {
                     {locations.map(item => (
                       <option value={item.nombre} key={item.id}>{item.nombre}</option>)
                     )}
-                    <option value='Other'>No se encuentra en la lista</option>
+                    <option value='Otro'>No se encuentra en la lista</option>
                   </select>
                 </div>
               </div>
