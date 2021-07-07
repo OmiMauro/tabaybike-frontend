@@ -16,8 +16,9 @@ const Signup = () => {
   const [provinceOrigin, setProvinceOrigin] = useState('')
   const [locationOrigin, setLocationOrigin] = useState('')
   const [distanceTour, setDistanceTour] = useState('')
+  const [almuerzo, setAlmuerzo] = useState('')
   const [selectTermsConditions, setSelectTermsConditions] = useState(false)
-  const [count, setCount] = useState(0)
+  /*   const [count, setCount] = useState(0) */
   const [message, setMessage] = useState('')
   const [bg, setBg] = useState('')
   const handleProvinces = async () => {
@@ -57,7 +58,7 @@ const Signup = () => {
   const handleInscription = async e => {
     e.preventDefault()
     const inscription = {
-      name, lastname, DNI, numberCell, email, provinceOrigin, locationOrigin, distanceTour
+      name, lastname, DNI, numberCell, email, provinceOrigin, locationOrigin, distanceTour, almuerzo
     }
     try {
       const response = await addInscription({ inscription })
@@ -69,10 +70,11 @@ const Signup = () => {
       setLastName('')
       setEmail('')
       setNumberCell('')
-      setCount(count + 1)
+      /*  setCount(count + 1) */
       setProvinceOrigin('')
       setLocationOrigin('')
       setDistanceTour('')
+      setAlmuerzo('')
       setSelectTermsConditions(false)
       setTimeout(() => { setToast(false) }, 10000)
     } catch (e) {
@@ -162,12 +164,12 @@ const Signup = () => {
               <div className='form-row mt-2'>
                 <div className='col'>
                   <select
-                    value={distanceTour} onChange={e => setDistanceTour(e.target.value)} className='custom-select flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0'
-                    id='distanceTour' name='distanceTour' required
+                    value={almuerzo} onChange={e => setAlmuerzo(e.target.value)} className='custom-select flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0'
+                    id='almuerzo' name='almuerzo' required
                   >
-                    <option hidden>¿Almorzas el Domingo? *</option>
-                    <option key='Si' value>Si</option>
-                    <option key='No' value={false}>No</option>
+                    <option hidden>¿Te quedás a almorzar el Domingo? *</option>
+                    <option key='Si' value='true'>Sí</option>
+                    <option key='No' value='false'>No</option>
                   </select>
                 </div>
               </div>
