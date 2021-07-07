@@ -14,13 +14,13 @@ const App = () => {
     <>
       <SnackbarProvider>
         <main id='page-top'>
-          <Navbar />
+          {/*  <Navbar />
           <Header />
           <About />
           <Projects />
           <Signup />
           <Contact />
-          <Footer />
+          <Footer /> */}
           <Table />
         </main>
       </SnackbarProvider>
