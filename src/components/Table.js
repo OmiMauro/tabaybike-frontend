@@ -10,34 +10,38 @@ const Table = () => {
     }
     inscriptionHook()
   }, [])
-
+  console.log(inscription.almuerza)
   return (
     <>
       <div className='table-responsive'>
         <table className='table table-striped table-dark table-bordered table-hover'>
           <thead className='thead-dark'>
             <tr>
-              <th scope='col'>Nombre</th>
+              <th scope='col'>#</th>
               <th scope='col'>Apellido</th>
+              <th scope='col'>Nombre</th>
               <th scope='col'>DNI</th>
               <th scope='col'>Email</th>
               <th scope='col'>Celular</th>
               <th scope='col'>Provincia</th>
               <th scope='col'>Localidad</th>
               <th scope='col'>Recorrido</th>
+              <th scope='col'>Almuerza</th>
             </tr>
           </thead>
           <tbody className='table-striped'>
-            {inscription.map(item => (
+            {inscription.map((item, index) => (
               <tr>
-                <th>{item.name}</th>
+                <th>{index + 1}</th>
                 <th>{item.lastname}</th>
+                <th>{item.name}</th>
                 <th>{item.DNI}</th>
                 <th>{item.email}</th>
                 <th>{item.numberCell}</th>
                 <th>{item.provinceOrigin}</th>
                 <th>{item.locationOrigin}</th>
                 <th>{item.distanceTour}</th>
+                <th>{item.almuerzo ? 'SI' : 'NO'}</th>
               </tr>
             ))}
           </tbody>
