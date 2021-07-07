@@ -8,6 +8,7 @@ const Footer = () => {
         <div>
 
           <a href='mailto:ominuka.mauro@gmail.com' rel='noreferrer'><strong>Sugerencias</strong></a>
+
           <div>
             <a className='mx-2' href='https://github.com/OmiMauro' rel='noreferrer' target='_blank'><i className='fab fa-github' /></a>
           </div>
