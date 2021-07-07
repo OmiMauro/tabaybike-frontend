@@ -33,7 +33,7 @@ const Projects = () => {
               <br />
               <p className='text-danger font-italic' style={{ 'font-size': '12px' }}>
                 El encuentro es totalmente gratuito.
-                Sin embargo, en la mesa de inscripción, dispondremos de una caja para aquellos que deseen dejar alguna colaboración, para solventar los gastos de la organización y combustible que demandan los vehículos de asistencia.
+                Sin embargo, en la mesa de inscripción, dispondremos de una caja para aquellos que deseen dejar alguna colaboración, cuyo fin será solventar los gastos de combustible que demandan los vehículos de asistencia y gastos de la organización.
               </p>
 
             </div>
@@ -63,7 +63,7 @@ const Projects = () => {
                   <a
                     href='https://goo.gl/maps/J7cLhwmYpTSuJqSW6'
                     rel='noreferrer' target='_blank'
-                  >Descargar indicaciones
+                  >Descargar recorrido
                   </a>
                   {/*                   <a href='https://goo.gl/maps/WRjb3dqW2kVkyAhb7' rel='noreferrer' target='_blank'>Descargar indicaciones</a>
  */}                  <hr className='d-none d-lg-block mb-0 ml-0' />
@@ -89,7 +89,7 @@ const Projects = () => {
                     <li className='list-unstyled'>Retorno por Colonia Tabay</li>
                     <li className='list-unstyled'>Llegada al Salto Tabay</li>
                   </ul>
-                  <a href='https://www.google.com/maps/d/embed?mid=1PiKJ5L_kXO6dt2hbEc4Cut6z_MumG91d' rel='noreferrer' target='_blank'>Descargar indicaciones</a>
+                  <a href='https://www.google.com/maps/d/embed?mid=1PiKJ5L_kXO6dt2hbEc4Cut6z_MumG91d' rel='noreferrer' target='_blank'>Descargar recorrido</a>
                   <hr className='d-none d-lg-block mb-0 ml-0' />
                 </div>
               </div>
@@ -118,7 +118,7 @@ const Projects = () => {
                   <a
                     href='https://www.google.com/maps/d/embed?mid=1Kh_HUgIh4zR4e-ThtZLxUaTbsbxP9wS4'
                     rel='noreferrer' target='_blank'
-                  >Descargar indicaciones
+                  >Descargar recorrido
                   </a>
                   {/*                   <a href='https://goo.gl/maps/WRjb3dqW2kVkyAhb7' rel='noreferrer' target='_blank'>Descargar indicaciones</a>
  */}                  <hr className='d-none d-lg-block mb-0 ml-0' />
