@@ -33,7 +33,7 @@ const Projects = () => {
               <br />
               <p className='text-danger font-italic' style={{ 'font-size': '12px' }}>
                 El encuentro es totalmente gratuito.
-                Sin embargo, en la mesa de inscripción dispondremos de una caja para aquellos que deseen dejar alguna colaboración para los gastos de la organización.
+                Sin embargo, en la mesa de inscripción, dispondremos de una caja para aquellos que deseen dejar alguna colaboración, para solventar los gastos de la organización y combustible que demandan los vehículos de asistencia.
               </p>
 
             </div>
