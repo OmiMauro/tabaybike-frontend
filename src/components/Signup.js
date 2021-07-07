@@ -103,7 +103,7 @@ const Signup = () => {
               </div>
               <div className='form-row mt-2'>
                 <div className='col'>
-                  <input value={DNI} maxlength='9' minLength='7' onChange={(e) => setDNI(e.target.value)} className='form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0' id='DNI' type='text' placeholder='DNI-sin puntos y/o espacios *' name='DNI' required='required' />
+                  <input value={DNI} maxlength='8' minLength='7' onChange={(e) => setDNI(e.target.value.replace(/[^0-9]/g, ''))} className='form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0' id='DNI' type='text' placeholder='DNI *' name='DNI' required='required' />
                 </div>
               </div>
               <div className='form-row mt-2'>
