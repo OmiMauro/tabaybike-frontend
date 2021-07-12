@@ -3,6 +3,8 @@ const Footer = () => {
   return (
     <footer className='footer bg-black small text-center text-white-50'>
       <div className='container'>
+        <a href='privacy_policy.html' target='_blank' rel='noreferrer'> Politicas de privacidad</a>
+        <br />
         <div>
           Consultas y/o sugerencias:
           <div>
