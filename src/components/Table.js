@@ -10,7 +10,7 @@ const Table = () => {
     }
     inscriptionHook()
   }, [])
-  console.log(inscription.almuerza)
+
   return (
     <>
       <div className='table-responsive'>
@@ -46,6 +46,7 @@ const Table = () => {
             ))}
           </tbody>
         </table>
+
       </div>
     </>
   )

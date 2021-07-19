@@ -24,4 +24,19 @@ const getInscritpions = async () => {
   return response
 }
 
-export { getCount, addInscription, getInscritpions }
+const getCountAlmuerzo = async () => {
+  const response = await axios({
+    method: 'get',
+    url: '/inscription/almuerzo'
+  })
+  return response
+}
+const getCountTours = async () => {
+  const response = await axios({
+    method: 'get',
+    url: '/inscription/lengthTours'
+  })
+  return response
+}
+
+export { getCount, addInscription, getInscritpions, getCountAlmuerzo, getCountTours }
