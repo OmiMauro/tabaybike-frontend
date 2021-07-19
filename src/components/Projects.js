@@ -116,9 +116,9 @@ const Projects = () => {
                     <li className='list-unstyled'>Salto Tabay</li>
                   </ul>
                   <a
-                    href='https://www.google.com/maps/d/embed?mid=1Kh_HUgIh4zR4e-ThtZLxUaTbsbxP9wS4'
+                    href='https://www.strava.com/routes/2852248217277030836'
                     rel='noreferrer' target='_blank'
-                  >Descargar recorrido
+                  >Descargar recorrido (Strava)
                   </a>
                   {/*                   <a href='https://goo.gl/maps/WRjb3dqW2kVkyAhb7' rel='noreferrer' target='_blank'>Descargar indicaciones</a>
  */}                  <hr className='d-none d-lg-block mb-0 ml-0' />
